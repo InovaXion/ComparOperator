@@ -27,8 +27,7 @@ class Manager {
     {
         $reponse = $this->bdd->prepare('SELECT * FROM tour_operators
                                     INNER JOIN destinations
-                                    WHERE destinations.id_tour_operator = tour_operators.id
-                                    AND destinations.location = ?
+                                    WHERE  destinations.location = ?
                                             ');
         $reponse->execute(array(
             $destination
