@@ -6,6 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>ComparOperator</title>
     <?php require('../../partials/links.php'); ?>
+    <?php // Connexion bdd
+$db = new PDO('mysql:host=127.0.0.1;dbname=ComparOperator', 'root', '');
+$db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING); // On émet une alerte à chaque fois qu'une requête a échoué. ?>
+
 </head>
 <body>
     
@@ -23,6 +27,25 @@
     <a href="#" class="btn btn-primary">Voir l'offre</a>
   </div>
 </div>
+
+
+
+<?php include('../../assets/objets/Manager.php'); 
+      include('../../assets/objets/Destination.php');
+
+$manager = new Manager($db);
+$test = $manager->getAllDestination();
+
+echo '<pre>' . var_export($test, true) . '</pre>';
+
+
+foreach ($test as $test)
+{
+  $destination = New Destination($test['location']);
+ echo $destination->getLocation();
+}
+?>
+
 
 
 

@@ -8,18 +8,18 @@ class Destination
     private $price;
     private $id_tour_operator;
 
-    public function __construct()
+    public function __construct($location)
     {
-        
+        $this->location = $location;
     }
 
     public function getId()
     {
-        
+        return $this->id;
     }
     public function getLocation()
     {
-        
+        return $this->location;
     }
     public function getPrice()
     {
@@ -30,7 +30,3 @@ class Destination
         
     }
 }
-
-$test = new Destination($db);
-
-echo '<pre>' . var_export($test->getAllDestination(), true) . '</pre>';
