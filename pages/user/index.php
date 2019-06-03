@@ -18,11 +18,13 @@
 <div class="card text-center" style="width: 18rem;">
   <div class="card-body">
     <h5 class="card-title">Le domaine de Ker-Ys</h5>
-    <img id="foto1" src="https://www.camping-ledomainedekerys.fr/wp-content/uploads/sites/14/2016/04/camping-st-nic-vue-aerienne.jpg">
+    <img src="https://www.camping-ledomainedekerys.fr/wp-content/uploads/sites/14/2016/04/camping-st-nic-vue-aerienne.jpg" class="img-fluid" alt="Responsive image">
     <p class="card-text">Une situation exceptionnelle dans la baie de Douarnenez ! </p>
     <a href="#" class="btn btn-primary">Voir l'offre</a>
   </div>
 </div>
+
+
 
 
 
