@@ -7,7 +7,14 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>ComparOperator</title>
   <?php require('../../partials/links.php'); ?>
+
+  <?php // Connexion bdd
+  $db = new PDO('mysql:host=127.0.0.1;dbname=ComparOperator', 'root', '');
+  $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING); 
+  ?>
+
   <?php require('../../assets/bdd/bdd.php'); ?>
+
 
 
 </head>
@@ -25,7 +32,11 @@
       <h5 class="card-title">Le domaine de Ker-Ys</h5>
       <img src="https://www.camping-ledomainedekerys.fr/wp-content/uploads/sites/14/2016/04/camping-st-nic-vue-aerienne.jpg" class="img-fluid" alt="Responsive image">
       <p class="card-text">Une situation exceptionnelle dans la baie de Douarnenez ! </p>
-      <a href="#" class="btn btn-primary">Voir l'offre</a>
+
+      <a href="toursOpForDestination.php" class="btn btn-primary">Voir l'offre</a>
+
+     
+
     </div>
   </div>
 
@@ -41,9 +52,14 @@
 
 
   foreach ($test as $test) {
+
+    $destination = new Destination($test['location']);
+    echo $destination->getLocation();
+
     $destinations = new Destination($test['id'], $test['location'], $test['price'], $test['id_tour_operator'], $test['imgPath']);
     echo '<pre>' . var_export($destinations, true) . '</pre>';
     
+
   }
   ?>
 
