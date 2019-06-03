@@ -1,11 +1,6 @@
 <?php
 
-// Connexion bdd
-$db = new PDO('mysql:host=127.0.0.1;dbname=ComparOperator', 'root', '');
-$db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING); // On émet une alerte à chaque fois qu'une requête a échoué.
 
-
-// test
 // OBJET MANAGER
 class Manager {
     private $bdd;
@@ -28,10 +23,12 @@ class Manager {
 
     public function getOperatorByDestination()
     {
-        $reponse = $this->bdd->query('SELECT * FROM tour_operator
+        $reponse = $this->bdd->query('SELECT * FROM tour_operators
                                     INNER JOIN destinations
-                                    WHERE destination.id_tour_operator = tour_operator.id
+                                    WHERE destinations.id_tour_operator = tour_operators.id
                                             ');
+        $operatorByDestination = $reponse->fetchAll();
+        return $operatorByDestination;
     }
 
     public function createReview()
@@ -59,7 +56,3 @@ class Manager {
 
     }
 }
-
-$manager = new Manager($db);
-
-echo '<pre>' . var_export($manager->getAllDestination(), true) . '</pre>';
