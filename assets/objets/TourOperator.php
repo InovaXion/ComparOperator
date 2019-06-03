@@ -1,6 +1,6 @@
 <?php 
 
-class tourOperator
+class TourOperator
 {
     private $id;
     private $name;

@@ -1,0 +1,19 @@
+#footer_to {
+    position: absolute;
+    color: white;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 150px;
+    background-color: rgb(41, 176, 218);
+    text-align: center;
+    padding-top: 10px;
+}
+
+.btn-floating {
+    color: white;
+}
+
+.btn-floating:hover {
+    color: blue;
+}

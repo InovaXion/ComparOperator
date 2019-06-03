@@ -1,1 +1,2 @@
-// REDIRECTION PAGES/USERS/INDEX.PHP //
+<?php
+header('Location: /pages/user');
