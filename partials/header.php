@@ -6,7 +6,7 @@
     <div class="header-right">
         <h1>Compare Operator </h1>
         <a class="active" href="index.php">Voyages</a>
-        <a href="#contact">Messages</a>
+        <a href="#messages">Messages</a>
         <a href="#profil">Profil</a>
         <a href="#inscription">S'inscrire</a>
         <form class="form-inline my-2 my-lg-0">
