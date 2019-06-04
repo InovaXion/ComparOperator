@@ -19,8 +19,8 @@
             <div class="col-sm-4 text-center">
 
 
-                <!-- Poster-->
-                <img class="bordure image" id="poster" src="http://www.saint-nic.fr/images/bandeau/st_nic07.jpg" alt="photo-stnic">
+
+
             </div>
             <div class="col-sm-8 image2">
                 <!--Titre-->
@@ -50,40 +50,7 @@
                         <span class="sr-only">Next</span>
                     </a>
                 </div>
-                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">
-  Description
-</button>
-
-<!-- Modal -->
-<div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLongTitle">Le Domaine de Ker-Ys</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-      <div class="dropdown show">
-  <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    Tours Opérator
-  </a>
-
-  <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-    <a class="dropdown-item" href="#">Homair Vacances</a>
-    <a class="dropdown-item" href="#">Club Med</a>
-    <a class="dropdown-item" href="#">Hello Village</a>
-  </div>
-</div>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Réservez</button>
-      </div>
-    </div>
-  </div>
-</div>
+               
             </div>
         </div>
     </div>

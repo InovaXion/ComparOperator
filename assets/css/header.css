@@ -22,7 +22,7 @@
 }
 
 .header a:hover {
-    background-color: #ddd;
+    background-color: rgba(50, 170, 226, 0.349);
     color: black;
 }
 
