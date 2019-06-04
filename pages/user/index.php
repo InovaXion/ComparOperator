@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
 <head>
-  <meta charset="UTF-8">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>ComparOperator</title>
@@ -25,225 +25,45 @@
   // $test = $manager->getAllDestination2();
 
   $manager = new Manager($db);
-  $test = $manager->getOperatorByDestination('test');
+  $test = $manager->getAllDestination();
 
-  // echo '<pre>' . var_export($test, true) . '</pre>';
+  echo '<pre>' . var_export($test, true) . '</pre>';
 
   ?>
 
 <div class="row">
   <?php
-//   foreach ($test as $test) {
-//     $destinations = new Destination($test['id'], $test['location'], $test['price'], $test['id_tour_operator'], $test['imgPath'],$test['description']);
+  foreach ($test as $test) {
+    $destinations = new Destination($test['id'], $test['location'], $test['price'], $test['id_tour_operator'], $test['imgPath'],$test['description']);
     
-//     include('../../partials/cards.php');
+    include('../../partials/cardsDestination.php');
 
-//  }
+ }
 
   // foreach ($test as $test) {
   //   $destinations = new Destination($test['id'], $test['location'], $test['price'], $test['id_tour_operator'], $test['imgPath']);
   //   // echo '<pre>' . var_export($destinations, true) . '</pre>';
 
 
-<<<<<<< HEAD
   // }
   
   ?>
 
-=======
  
-  // ?>
 </div>
->>>>>>> aeb56d4a47539bf3bffa67ecaee1e0da27dbee82
-
-
-
-
-
-<<<<<<< HEAD
-
-  <div class="row">
-
-    <!-- // CARD // -->
-    <div class="col-sm-4">
-      <div class="card mb-4 shadow-sm text-center">
-        <h2 class="text-center">Le domaine de Ker-Ys</h2>
-        <div class="col-lg-12">
-          <hr>
-        </div>
-
-
-        <div class="card-body">
-          <img src="https://www.camping-ledomainedekerys.fr/wp-content/uploads/sites/14/2016/04/camping-st-nic-vue-aerienne.jpg" class="img-fluid" alt="Responsive image">
-          <p class="card-text text-center">Une situation exceptionnelle dans la baie de Douarnenez ! </p>
-          <div class="text-center">
-            <a href="toursOpForDestination.php" class="btn btn-success">Voir l'offre</a>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- // END CARD // -->
-
-    <div class="col-sm-4">
-      <div class="card mb-4 shadow-sm text-center">
-        <h2 class="text-center">Le domaine de Ker-Ys</h2>
-        <div class="col-lg-12">
-          <hr>
-        </div>
-        <div class="card-body">
-          <img src="https://www.camping-ledomainedekerys.fr/wp-content/uploads/sites/14/2016/04/camping-st-nic-vue-aerienne.jpg" class="img-fluid" alt="Responsive image">
-          <p class="card-text text-center">Une situation exceptionnelle dans la baie de Douarnenez ! </p>
-          <div class="text-center">
-            <a href="toursOpForDestination.php" class="btn btn-success">Voir l'offre</a>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="col-sm-4">
-      <div class="card mb-4 shadow-sm text-center">
-        <h2 class="text-center">Le domaine de Ker-Ys</h2>
-        <div class="col-lg-12">
-          <hr>
-        </div>
-        <div class="card-body">
-          <img src="https://www.camping-ledomainedekerys.fr/wp-content/uploads/sites/14/2016/04/camping-st-nic-vue-aerienne.jpg" class="img-fluid" alt="Responsive image">
-          <p class="card-text text-center">Une situation exceptionnelle dans la baie de Douarnenez ! </p>
-          <div class="text-center">
-            <a href="toursOpForDestination.php" class="btn btn-success">Voir l'offre</a>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="col-sm-4">
-      <div class="card mb-4 shadow-sm text-center">
-        <h2 class="text-center">Le domaine de Ker-Ys</h2>
-        <div class="col-lg-12">
-          <hr>
-        </div>
-        <div class="card-body">
-          <img src="https://www.camping-ledomainedekerys.fr/wp-content/uploads/sites/14/2016/04/camping-st-nic-vue-aerienne.jpg" class="img-fluid" alt="Responsive image">
-          <p class="card-text text-center">Une situation exceptionnelle dans la baie de Douarnenez ! </p>
-          <div class="text-center">
-            <a href="toursOpForDestination.php" class="btn btn-success">Voir l'offre</a>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="col-sm-4">
-      <div class="card mb-4 shadow-sm text-center">
-        <h2 class="text-center">Le domaine de Ker-Ys</h2>
-        <div class="col-lg-12">
-          <hr>
-        </div>
-        <div class="card-body">
-          <img src="https://www.camping-ledomainedekerys.fr/wp-content/uploads/sites/14/2016/04/camping-st-nic-vue-aerienne.jpg" class="img-fluid" alt="Responsive image">
-          <p class="card-text text-center">Une situation exceptionnelle dans la baie de Douarnenez ! </p>
-          <div class="text-center">
-            <a href="toursOpForDestination.php" class="btn btn-success">Voir l'offre</a>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="col-sm-4">
-      <div class="card mb-4 shadow-sm text-center">
-        <h2 class="text-center">Le domaine de Ker-Ys</h2>
-        <div class="col-lg-12">
-          <hr>
-        </div>
-        <div class="card-body">
-          <img src="https://www.camping-ledomainedekerys.fr/wp-content/uploads/sites/14/2016/04/camping-st-nic-vue-aerienne.jpg" class="img-fluid" alt="Responsive image">
-          <p class="card-text text-center">Une situation exceptionnelle dans la baie de Douarnenez ! </p>
-          <div class="text-center">
-            <a href="toursOpForDestination.php" class="btn btn-success">Voir l'offre</a>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="col-sm-4">
-      <div class="card mb-4 shadow-sm text-center">
-        <h2 class="text-center">Le domaine de Ker-Ys</h2>
-        <div class="col-lg-12">
-          <hr>
-        </div>
-
-
-        <div class="card-body">
-          <img src="https://www.camping-ledomainedekerys.fr/wp-content/uploads/sites/14/2016/04/camping-st-nic-vue-aerienne.jpg" class="img-fluid" alt="Responsive image">
-          <p class="card-text text-center">Une situation exceptionnelle dans la baie de Douarnenez ! </p>
-          <div class="text-center">
-            <a href="toursOpForDestination.php" class="btn btn-success">Voir l'offre</a>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="col-sm-4">
-      <div class="card mb-4 shadow-sm text-center">
-        <h2 class="text-center">Le domaine de Ker-Ys</h2>
-        <div class="col-lg-12">
-          <hr>
-        </div>
-
-
-        <div class="card-body">
-          <img src="https://www.camping-ledomainedekerys.fr/wp-content/uploads/sites/14/2016/04/camping-st-nic-vue-aerienne.jpg" class="img-fluid" alt="Responsive image">
-          <p class="card-text text-center">Une situation exceptionnelle dans la baie de Douarnenez ! </p>
-          <div class="text-center">
-            <a href="toursOpForDestination.php" class="btn btn-success">Voir l'offre</a>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="col-sm-4">
-      <div class="card mb-4 shadow-sm text-center">
-        <h2 class="text-center">Le domaine de Ker-Ys</h2>
-        <div class="col-lg-12">
-          <hr>
-        </div>
-
-
-        <div class="card-body">
-          <img src="https://www.camping-ledomainedekerys.fr/wp-content/uploads/sites/14/2016/04/camping-st-nic-vue-aerienne.jpg" class="img-fluid" alt="Responsive image">
-          <p class="card-text text-center">Une situation exceptionnelle dans la baie de Douarnenez ! </p>
-          <div class="text-center">
-            <a href="toursOpForDestination.php" class="btn btn-success">Voir l'offre</a>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="col-sm-4">
-      <div class="card mb-4 shadow-sm text-center">
-        <h2 class="text-center">Le domaine de Ker-Ys</h2>
-        <div class="col-lg-12">
-          <hr>
-        </div>
-
-
-        <div class="card-body">
-          <img src="https://www.camping-ledomainedekerys.fr/wp-content/uploads/sites/14/2016/04/camping-st-nic-vue-aerienne.jpg" class="img-fluid" alt="Responsive image">
-          <p class="card-text text-center">Une situation exceptionnelle dans la baie de Douarnenez ! </p>
-          <div class="text-center">
-            <a href="toursOpForDestination.php" class="btn btn-success">Voir l'offre</a>
-          </div>
-        </div>
-      </div>
-    </div>
-
-  </div>
 
 
 
 
 
 
-=======
->>>>>>> aeb56d4a47539bf3bffa67ecaee1e0da27dbee82
 
 
 
-  <?php include('../../partials/footer.php'); ?>
+<?php include('../../partials/footer.php'); ?>
+
+<?php require('../../partials/scripts.php'); ?>
 
 
 </body>
-<?php require('../../partials/scripts.php'); ?>
-
 </html>

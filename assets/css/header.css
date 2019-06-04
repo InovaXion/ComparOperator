@@ -1,7 +1,9 @@
 .header {
     overflow: hidden;
     background-image: url(http://www.bikinietdentelle.com/wp-content/themes/source/images/header.png);
+    background-position-y: -20px;
     padding: 20px 10px;
+    margin-bottom: 30px;
    
 }
 

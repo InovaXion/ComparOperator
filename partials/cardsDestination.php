@@ -8,7 +8,13 @@ echo "
     </div>
     <div class='card-body'>
       <img src='../../assets/images/" . $test['imgPath'] . ".jpg' class='img-fluid' alt='Responsive image'>
+      <div class='col-lg-12'>
+        <hr>
+    </div>
           <p class='card-text text-center'>" . $test['description'] . "</p>
+          <div class='col-lg-12'>
+        <hr>
+    </div>
           <div class='text-center'>
           
             
