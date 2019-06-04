@@ -78,4 +78,4 @@ $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING); // On émet une aler
 $manager = new Manager($db);
 $test = $manager->getOperatorByDestination('test');
 
-echo '<pre>' . var_export($test, true) . '</pre>';
+// echo '<pre>' . var_export($test, true) . '</pre>';
