@@ -8,14 +8,16 @@ class Destination
     private $price;
     private $id_tour_operator;
     private $imgPath;
+    private $description;
 
-    public function __construct($id,$location,$price,$id_tour_operator,$imgPath)
+    public function __construct($id,$location,$price,$id_tour_operator,$imgPath,$description)
     {
         $this->id = $id;
         $this->location = $location;
         $this->price = $price;
         $this->id_tour_operator = $id_tour_operator;
         $this->imgPath = $imgPath;
+        $this->description = $description;
 
 
     }

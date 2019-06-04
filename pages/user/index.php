@@ -21,35 +21,46 @@
   include('../../assets/objets/Manager.php');
   include('../../assets/objets/Destination.php');
 
-
   // $manager = new Manager($db);
   // $test = $manager->getAllDestination2();
 
   $manager = new Manager($db);
-  $test = $manager->updateOperatorToNoPremium(1);
-
+  $test = $manager->getOperatorByDestination('test');
 
   // echo '<pre>' . var_export($test, true) . '</pre>';
 
-  // foreach ($test as $test) {
-  //   $destinations = new Destination($test['id'], $test['location'], $test['price'], $test['id_tour_operator'], $test['imgPath']);
-  // echo '<pre>' . var_export($destinations, true) . '</pre>';
+  ?>
 
+<div class="row">
+  <?php
+//   foreach ($test as $test) {
+//     $destinations = new Destination($test['id'], $test['location'], $test['price'], $test['id_tour_operator'], $test['imgPath'],$test['description']);
+    
+//     include('../../partials/cards.php');
+
+//  }
 
   // foreach ($test as $test) {
   //   $destinations = new Destination($test['id'], $test['location'], $test['price'], $test['id_tour_operator'], $test['imgPath']);
   //   // echo '<pre>' . var_export($destinations, true) . '</pre>';
 
 
+<<<<<<< HEAD
   // }
   
   ?>
 
+=======
+ 
+  // ?>
+</div>
+>>>>>>> aeb56d4a47539bf3bffa67ecaee1e0da27dbee82
 
 
 
 
 
+<<<<<<< HEAD
 
   <div class="row">
 
@@ -224,6 +235,8 @@
 
 
 
+=======
+>>>>>>> aeb56d4a47539bf3bffa67ecaee1e0da27dbee82
 
 
 
