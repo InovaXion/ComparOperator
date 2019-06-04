@@ -45,27 +45,12 @@
   //   // echo '<pre>' . var_export($destinations, true) . '</pre>';
 
 
-<<<<<<< HEAD
-=======
   // }
   
   ?>
 
->>>>>>> 61d6233fb426ec25cc070dcac7309a647938dc25
  
 </div>
-<<<<<<< HEAD
-
-
-
-
-
-
-
-
-  <?php include('../../partials/footer.php'); ?>
-=======
->>>>>>> 61d6233fb426ec25cc070dcac7309a647938dc25
 
 
 
