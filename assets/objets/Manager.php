@@ -90,6 +90,7 @@ class Manager {
     ));
 }
 
+// Crée un opérateur //
     public function createTourOperator()
     {
 
