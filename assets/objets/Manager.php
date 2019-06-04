@@ -3,12 +3,14 @@
 
 // OBJET MANAGER//
 class Manager {
+
     private $bdd;
 
     public function __construct($db)
     {
         $this->setDb($db);
     }
+
     public function setDb(PDO $db)
     {
       $this->bdd = $db;
@@ -17,14 +19,7 @@ class Manager {
 // Retourne toutes les destinations //
     public function getAllDestination()
     {
-        $reponse = $this->bdd->query('SELECT * FROM destinations');
-        $allDestinations = $reponse->fetchAll();
-        return $allDestinations;
-    }
-
-    public function getAllDestination2()
-    {
-        $reponse = $this->bdd->query('SELECT DISTINCT id,location,price,description,imgPath,id_tour_operator FROM destinations');
+        $reponse = $this->bdd->query('SELECT * FROM destinations WHERE id_tour_operator = 9999');
         $allDestinations = $reponse->fetchAll();
         return $allDestinations;
     }
@@ -56,39 +51,47 @@ class Manager {
         
     }
 
-    // Retourne 
+// Retourne  le/les review.s pour un opérateur selectionné //
     public function getReviewByOperatorId($id_tour_operator)
     {
         $reponse = $this->bdd->prepare('SELECT * FROM reviews WHERE id_tour_operator = ?');
         $reponse->execute(array(
             $id_tour_operator
         ));
-        $getReviewByOperatorId = $reponse->fetch();
+        $getReviewByOperatorId = $reponse->fetchAll();
         return $getReviewByOperatorId;
     }
 
+// Retourne tout les opérateurs //
     public function getAllOperator()
     {
 
     }
 
-    public function updateOperatorToPremium()
+// Update un opérateur selectionné en premium //
+    public function updateOperatorToPremium($id_tour_operator)
     {
-
+        $reponse = $this->bdd->prepare('UPDATE tour_operators
+                                        SET is_premium = 1
+                                        WHERE id = ?');
+        $reponse->execute(array(
+            $id_tour_operator
+        ));
     }
-    
+
+// Update un opérateur selectionné en non-premium //
+    public function updateOperatorToNoPremium($id_tour_operator)
+    {
+    $reponse = $this->bdd->prepare('UPDATE tour_operators
+                                    SET is_premium = 0
+                                    WHERE id = ?');
+    $reponse->execute(array(
+        $id_tour_operator
+    ));
+}
+
     public function createTourOperator()
     {
 
     }
 }
-
-// Connexion bdd
-$db = new PDO('mysql:host=127.0.0.1;dbname=ComparOperator', 'root', '');
-$db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING); // On émet une alerte à chaque fois qu'une requête a échoué.
-
-
-$manager = new Manager($db);
-$test = $manager->getOperatorByDestination('test');
-
-// echo '<pre>' . var_export($test, true) . '</pre>';
