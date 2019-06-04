@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
 <head>
-  <meta charset="UTF-8">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>ComparOperator</title>
@@ -25,29 +25,36 @@
   // $test = $manager->getAllDestination2();
 
   $manager = new Manager($db);
-  $test = $manager->getOperatorByDestination('test');
+  $test = $manager->getAllDestination();
 
-  // echo '<pre>' . var_export($test, true) . '</pre>';
+  echo '<pre>' . var_export($test, true) . '</pre>';
 
   ?>
 
 <div class="row">
   <?php
-//   foreach ($test as $test) {
-//     $destinations = new Destination($test['id'], $test['location'], $test['price'], $test['id_tour_operator'], $test['imgPath'],$test['description']);
+  foreach ($test as $test) {
+    $destinations = new Destination($test['id'], $test['location'], $test['price'], $test['id_tour_operator'], $test['imgPath'],$test['description']);
     
-//     include('../../partials/cards.php');
+    include('../../partials/cardsDestination.php');
 
-//  }
+ }
 
   // foreach ($test as $test) {
   //   $destinations = new Destination($test['id'], $test['location'], $test['price'], $test['id_tour_operator'], $test['imgPath']);
   //   // echo '<pre>' . var_export($destinations, true) . '</pre>';
 
 
+<<<<<<< HEAD
+=======
+  // }
+  
+  ?>
+
+>>>>>>> 61d6233fb426ec25cc070dcac7309a647938dc25
  
-  // ?>
 </div>
+<<<<<<< HEAD
 
 
 
@@ -57,9 +64,21 @@
 
 
   <?php include('../../partials/footer.php'); ?>
+=======
+>>>>>>> 61d6233fb426ec25cc070dcac7309a647938dc25
+
+
+
+
+
+
+
+
+
+<?php include('../../partials/footer.php'); ?>
+
+<?php require('../../partials/scripts.php'); ?>
 
 
 </body>
-<?php require('../../partials/scripts.php'); ?>
-
 </html>
