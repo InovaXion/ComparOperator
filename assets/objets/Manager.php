@@ -19,7 +19,7 @@ class Manager {
 // Retourne toutes les destinations //
     public function getAllDestination()
     {
-        $reponse = $this->bdd->query('SELECT * FROM destinations WHERE id_tour_operator = 9999');
+        $reponse = $this->bdd->query('SELECT * FROM destinations WHERE id_tour_operator = 10');
         $allDestinations = $reponse->fetchAll();
         return $allDestinations;
     }
@@ -30,11 +30,13 @@ class Manager {
         $reponse = $this->bdd->prepare('SELECT * FROM tour_operators
                                     INNER JOIN destinations
                                     WHERE  destinations.location = ?
+                                    AND destinations.id_tour_operator = tour_operators.id
+                                    AND tour_operators.id != 10
                                             ');
         $reponse->execute(array(
             $destination
         ));
-        $operatorByDestination = $reponse->fetch();
+        $operatorByDestination = $reponse->fetchAll();
         return $operatorByDestination;
     }
 // Crée une Review pour un opérateur //
