@@ -22,6 +22,13 @@ class Manager {
         return $allDestinations;
     }
 
+    public function getAllDestination2()
+    {
+        $reponse = $this->bdd->query('SELECT DISTINCT id,location,price,description,imgPath,id_tour_operator FROM destinations');
+        $allDestinations = $reponse->fetchAll();
+        return $allDestinations;
+    }
+
 // Retourne le/les opérateur.s pour une destination selectionnée //
     public function getOperatorByDestination($destination)
     {
@@ -49,9 +56,15 @@ class Manager {
         
     }
 
-    public function getReviewByOperatorId()
+    // Retourne 
+    public function getReviewByOperatorId($id_tour_operator)
     {
-
+        $reponse = $this->bdd->prepare('SELECT * FROM reviews WHERE id_tour_operator = ?');
+        $reponse->execute(array(
+            $id_tour_operator
+        ));
+        $getReviewByOperatorId = $reponse->fetch();
+        return $getReviewByOperatorId;
     }
 
     public function getAllOperator()

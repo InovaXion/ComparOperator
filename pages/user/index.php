@@ -26,9 +26,9 @@
   include('../../assets/objets/Destination.php');
 
   $manager = new Manager($db);
-  $test = $manager->getAllDestination();
+  $test = $manager->getAllDestination2();
 
-  // echo '<pre>' . var_export($test, true) . '</pre>';
+  echo '<pre>' . var_export($test, true) . '</pre>';
 
 
   foreach ($test as $test) {
