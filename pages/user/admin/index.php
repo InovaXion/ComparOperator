@@ -32,7 +32,8 @@
 
     $manager = new Manager($db);
 
-
+    $to = $manager->getAllOperator();
+    echo '<pre>' . var_export($to, true) . '</pre>';
     ?>
 
     <h1>Session Administrateur</h1>
@@ -90,19 +91,21 @@
                     </div>
                     <div class="form-group">
                         <label for="exampleFormControlInput1">Prix</label>
-
                         <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Prix">
                     </div>
+
+                    
+                    
                     <div class="form-group">
-                        <label for="exampleFormControlSelect1">Grade</label>
-                        <select class="form-control" id="exampleFormControlSelect1">
-                            <option>1</option>
-                            <option>2</option>
-                            <option>3</option>
-                            <option>4</option>
-                            <option>5</option>
-                        </select>
+                        <label for="exampleFormControlInput1">Tour Opérateur</label>
                     </div>
+                    <select class="form-control" id="exampleFormControlSelect1">
+
+                        <option>...</option>
+                        <option>...</option>
+
+                    </select>
+                
                 </form>
 
                 <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium, possimus!
@@ -122,11 +125,15 @@
             <div class="card-body">
                 <h5 class="card-title">Premium</h5>
                 <form>
-                    <div class="form-group">
-                        <label for="exampleFormControlInput1">Tour opérateur</label>
-
-                        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Tour opérateur">
+                <div class="form-group">
+                        <label for="exampleFormControlInput1">Tour Opérateur</label>
                     </div>
+                    <select class="form-control" id="exampleFormControlSelect1">
+
+                        <option>...</option>
+                        <option>...</option>
+
+                    </select>
                     <div class="form-group">
                         <label for="exampleFormControlSelect1">Premium</label>
                         <select class="form-control" id="exampleFormControlSelect1">

@@ -64,10 +64,22 @@ class Manager {
         return $getReviewByOperatorId;
     }
 
-// Retourne tout les opérateurs //
+// // Retourne toutes les destinations //
+// public function getAllDestination()
+// {
+//     $reponse = $this->bdd->query('SELECT * FROM destinations WHERE id_tour_operator = 10');
+//     $allDestinations = $reponse->fetchAll();
+//     return $allDestinations;
+// }
+
+
+    // Retourne tout les opérateurs //
     public function getAllOperator()
     {
-
+        $reponse = $this->bdd->query('SELECT * FROM tour_operators 
+                                      WHERE id != 10');
+            $allOperators = $reponse->fetchAll();
+             return $allOperators;
     }
 
 // Update un opérateur selectionné en premium //

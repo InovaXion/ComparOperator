@@ -3,8 +3,10 @@
 }
 
 body {
+  overflow-x: hidden;
   margin: 0px;
   font-family: Arial, Helvetica, sans-serif;
+  background-attachment: fixed;
   background-image: url(http://www.ascrif.org/template/images/background_vacances.jpg);
 }
 
