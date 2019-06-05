@@ -25,7 +25,7 @@ class Manager {
     }
 
 // Retourne le/les opérateur.s pour une destination selectionnée //
-    public function getOperatorByDestination($destination)
+    public function getOperatorByDestination(string $destination)
     {
         $reponse = $this->bdd->prepare('SELECT * FROM tour_operators
                                     INNER JOIN destinations
