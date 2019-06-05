@@ -6,28 +6,34 @@
 echo 
 "
 <div style='margin-top: 30px' class='col-sm-4'>
+
     <div class='card mb-4 shadow-sm text-center'>
-        <h2 class='text-center'>" . $operators->getName() . "</h2>
+        <h2 class='text-center'>" . $operators->getName() . "</h2><div class='grade'>";
+        if ($operators->getGrade() != 0) {
+            for ($i = 0; $i < $operators->getGrade(); $i++) {
+                echo '<i class="fas fa-star"></i>  ';
+            }
+        }
+        echo "
+        
+        </div>
             <div class='col-lg-12'> <hr>
+            
             </div>
                 <div class='card-body'>
-                    <h1>" . $operators->getId() . "</h1>
-                        <div class='col-lg-12'> <hr>
+                   
+                    
+                    <div class='col-lg-12'> <hr>
                         </div>
                     <p class='card-text text-center'>Prix : " . $operatorByDestination['price'] . "€</p>
-                    <br>";
+                    <hr>";
                     if ($review->getId_tour_operator() == $operators->getId()){
                         echo 
                         "
-                        " . $review->getAuthor() . " | ". $review->getMessage() ." <br>
+                        <p>" . $review->getAuthor() . " à dit : ". $review->getMessage() ."</p> <br>
                         ";
                     }
-                    "<br>
-                    <h2>". $reviewByOperatorId['id_tour_operator'] ."</h2>
-                        <div class='col-lg-12'>
-                            <hr>
-                        </div>
-                    <div class='text-center'>
+                    "
 ";
           
 if ($operators->getIsPremium() == 1){
@@ -39,12 +45,15 @@ if ($operators->getIsPremium() == 1){
     ";
 }
 
+
+
+
 echo
 "
                     </div>
                 </div>
     </div>
-</div>
+
 ";
 
 

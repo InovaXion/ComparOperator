@@ -72,21 +72,21 @@
 
 ?>
             <div class="row">
-  <?php
-  foreach ($operatorsByDestination as $operatorByDestination) {
-  $reviewsByOperatorId = $manager->getReviewByOperatorId($operatorByDestination['0']);
+<?php
 
+$manager = new Manager($db);
+$operatorsByDestination = $manager->getOperatorByDestination($destination);
+
+// Les cards // 
+foreach ($operatorsByDestination as $operatorByDestination) {
+  $reviewsByOperatorId = $manager->getReviewByOperatorId($operatorByDestination['0']);
     $operators = new TourOperator($operatorByDestination['0'], $operatorByDestination['name'], $operatorByDestination['grade'], $operatorByDestination['link'], $operatorByDestination['is_premium']);
     // echo '<pre>' . var_export($reviewsByOperatorId, true) . '</pre>';
-    
-    foreach($reviewsByOperatorId as $reviewByOperatorId)
-    {
+    foreach($reviewsByOperatorId as $reviewByOperatorId){
       $review = new Review($reviewByOperatorId['id'], $reviewByOperatorId['message'], $reviewByOperatorId['author'], $reviewByOperatorId['id_tour_operator']);
-    echo '<pre>' . var_export($review, true) . '</pre>';
-      
+    // echo '<pre>' . var_export($review, true) . '</pre>';  
     }
     include('../../partials/cardsTourOperator.php');
-
  }
 
   ?>
