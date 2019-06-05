@@ -18,8 +18,9 @@ echo "
           <div class='text-center'>
           
             
-<form action='toursOpForDestination.php' method='POST'>
+<form action='test.php' method='POST'>
 <input type='hidden' value='" . $destination['location'] . "' name='destination' />
+<input type='hidden' value='" . $destination['imgPath'] . "' name='imgPath' />
 <button type='submit' class='btn btn-success'>Voir les Opérateurs pour cette destination</button>  
 </form>      
           </div>
