@@ -10,9 +10,9 @@ class Review {
     public function __construct($id, $message, $author, $id_tour_operator)
     {
         $this->id = $id;
-        $this->id = $message;
-        $this->id = $author;
-        $this->id = $id_tour_operator;
+        $this->message = $message;
+        $this->author = $author;
+        $this->id_tour_operator = $id_tour_operator;
 
     }
 
