@@ -33,7 +33,7 @@ echo
                         <p>" . $review->getAuthor() . " à dit : ". $review->getMessage() ."</p> <br>
                         ";
                     }
-                    "
+                    echo "<p> test de test de test</p>
 ";
           
 if ($operators->getIsPremium() == 1){

@@ -57,7 +57,7 @@
                         <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="link">
                     </div>
                     <div class="form-group">
-                        <label for="exampleFormControlSelect1">Grade</label>
+                        <label for="exampleFormControlSelect1">Étoiles</label>
                         <select class="form-control" id="exampleFormControlSelect1">
                             <option>1</option>
                             <option>2</option>
@@ -70,7 +70,7 @@
                 <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium, possimus!
                     Blanditiis corrupti at a nam voluptates voluptatibus nulla architecto. Possimus aperiam odio magni
                     veritatis assumenda quasi necessitatibus quo libero deleniti?</p>
-                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                
             </div>
             <button type="button" class="btn btn-success btn-lg btn-block">Créer</button>
         </div>
@@ -98,21 +98,21 @@
                     
                     <div class="form-group">
                         <label for="exampleFormControlInput1">Tour Opérateur</label>
-                    </div>
+                    
                     <select class="form-control" id="exampleFormControlSelect1">
 
                         <option>...</option>
                         <option>...</option>
 
                     </select>
-                
+                    </div>
                 </form>
 
                 <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium, possimus!
                     Blanditiis corrupti at a nam voluptates voluptatibus nulla architecto. Possimus aperiam odio magni
                     veritatis assumenda quasi necessitatibus quo libero deleniti?</p>
 
-                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+              
             </div>
             <button type="button" class="btn btn-success btn-lg btn-block">Créer</button>
         </div>
@@ -127,13 +127,14 @@
                 <form>
                 <div class="form-group">
                         <label for="exampleFormControlInput1">Tour Opérateur</label>
-                    </div>
+                   
                     <select class="form-control" id="exampleFormControlSelect1">
 
                         <option>...</option>
                         <option>...</option>
 
                     </select>
+                    </div>
                     <div class="form-group">
                         <label for="exampleFormControlSelect1">Premium</label>
                         <select class="form-control" id="exampleFormControlSelect1">
@@ -143,12 +144,12 @@
                         </select>
                     </div>
                     <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum dicta autem officia libero facere fugit labore recusandae! Deserunt qui esse tenetur sequi ullam voluptatum ex aut maiores optio, aliquam voluptates.</p>
-                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                    
             </div>
-            <button type="button" class="btn btn-success btn-lg btn-block">Créer</button>
+            <button type="button" class="btn btn-success btn-lg btn-block">Update</button>
         </div>
     </div>
-
+<br>
 
 
 
