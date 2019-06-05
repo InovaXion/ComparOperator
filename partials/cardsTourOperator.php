@@ -33,14 +33,33 @@ echo
                         <p>" . $review->getAuthor() . " à dit : ". $review->getMessage() ."</p> <br>
                         ";
                     }
-                    echo "<p> test de test de test</p>
+                    echo "
+
+
+                    <form class='bordures' action='' method=''>
+                    <div class='form-group'>
+                      <label for='exampleInputEmail1'>Pseudo</label>
+                      <input name='author' type='text' class='form-control' id='exampleInputEmail1' aria-describedby='emailHelp' placeholder='Pseudo'>
+                    </div>
+                    <div class='form-group'>
+                      <label for='exampleInputPassword1'>Message</label>
+                      <input name='message' type='text' class='form-control' id='exampleInputPassword1' placeholder='Message'>
+                    </div>
+                    <button type='button' class='btn btn-success'>Valider</button>
+                    </form>
+
+
+
+
+
+
 ";
           
 if ($operators->getIsPremium() == 1){
     echo 
     "
-                       <form action='". $operators->getLink() ."' method=''>
-                            <button type='sumbit' class='btn btn-success'>Voir le site</button>
+                       <form action='". $operators->getLink() ."' method=''><br>
+                       <button type='button' class='btn btn-secondary btn-lg btn-block'>Voir le site</button>
                         </form>
     ";
 }
