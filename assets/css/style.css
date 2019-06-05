@@ -5,7 +5,19 @@
 body {
   margin: 0px;
   font-family: Arial, Helvetica, sans-serif;
-  background-image:url(http://www.ascrif.org/template/images/background_vacances.jpg);
+  background-image: url(http://www.ascrif.org/template/images/background_vacances.jpg);
 }
 
-
+.carousel-inner img {
+  margin: auto;
+}
+/* .carousel-control-next-icon {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background: transparent no-repeat center center;
+}
+.carousel-control-next {
+  color: red;
+  text-align: center;
+} */

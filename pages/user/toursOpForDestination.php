@@ -22,14 +22,14 @@
 
 
             </div>
-            <div class="col-sm-8 image2">
+            <div class="col-sm-8 text-center">
                 <!--Titre-->
                 <h2 class="text-left titre">Le Domaine de Ker-Ys</h2>
 
 
             </div>
-            <div class="col-sm-8 text-center">
-                <div id="carouselExampleControls` + i + `" class="carousel slide" data-ride="carousel">
+            <div class="col-sm-12 text-center">
+                <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
                     <div class="carousel-inner">
                         <div class="carousel-item active">
                             <img class="d-block w-50" src="https://image.camping-and-co.com/photos/1935/camping-domaine-de-ker-ys_1485188945_xl.jpg" alt="First slide">
@@ -50,55 +50,39 @@
                         <span class="sr-only">Next</span>
                     </a>
                 </div>
-               
+
             </div>
         </div>
+
+
+        <div class="row">
+            <div class='col-sm-4'>
+                <div class='card mb-4 shadow-sm text-center'>
+                    <h2 class='text-center'>" . $test['location'] . "</h2>
+                    <div class='col-lg-12'>
+                        <hr>
+                    </div>
+                    <div class='card-body'>
+                        <img src='../../assets/images/" . $test[' imgPath'] . ".jpg' class='img-fluid' alt='Responsive image'>
+      <div class='col-lg-12'>
+        <hr>
+    </div>
+          <p class='card-text text-center'>" . $test['description'] . "</p>
+          <div class='col-lg-12'>
+        <hr>
+    </div>
+          <div class='text-center'>
+          </div>
+          
+          </div>
+          </div>
     </div>
     </div>
 
+    </div>
 
 
 
-
-    <!-- <div class="card text-center">
-        <div class="card-header">
-            Camping Le Domaine de Ker-Ys
-        </div>
-
-
-        <div data-interval="2500" id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img class="d-block w-80" src="https://cdn-2.homair.com/z-z/carousel_park_mobile/photos/france/bretagne/st-nic/le-domaine-de-ker-ys_064759_ori.jpg" alt="First slide">
-                </div>
-                <div class="carousel-item">
-                    <img class="d-block w-80" src="https://cdn-2.homair.com/z-z/carousel_park_mobile/photos/france/bretagne/st-nic/le-domaine-de-ker-ys_064748_ori.jpg" alt="Second slide">
-                </div>
-                <div class="carousel-item">
-                    <img class="d-block w-80" src="https://www.francethisway.com/images/places/parc-regional-armorique.jpg" alt="Third slide">
-                </div>
-            </div>
-        </div> -->
-
-
-    <!-- 
-        <div class="card-body">
-            <h5 class="card-title">
-
-                Saint-Nic, à 0.0 km de : Centre-ville <br>
-
-                Pentrez Plage , 29550 St Nic
-                , Saint-Nic
-                , France<br>
-                Téléphone: 0442204725
-            </h5>
-            <p class="card-text">Excellent emplacement.</p>
-            <a href="index.php" class="btn btn-primary">Retour</a>
-        </div>
-        <div class="card-footer text-muted">
-            2 days ago
-        </div>
-    </div> -->
 
 
 
