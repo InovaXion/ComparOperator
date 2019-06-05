@@ -18,35 +18,29 @@
 
   <?php
   include('../../partials/header.php');
+  // Les objets  //
   include('../../assets/objets/Manager.php');
   include('../../assets/objets/Destination.php');
+  include('../../assets/objets/TourOperator.php');
+  include('../../assets/objets/Review.php');
 
-  // $manager = new Manager($db);
-  // $test = $manager->getAllDestination2();
+
 
   $manager = new Manager($db);
-  $test = $manager->getAllDestination();
-
-  // echo '<pre>' . var_export($test, true) . '</pre>';
+  $destinations = $manager->getAllDestination();
 
   ?>
 
 <div class="row">
   <?php
-  foreach ($test as $test) {
-    $destinations = new Destination($test['id'], $test['location'], $test['price'], $test['id_tour_operator'], $test['imgPath'],$test['description']);
+  foreach ($destinations as $destination) {
+
+    $destination1 = new Destination($destination['id'], $destination['location'], $destination['price'], $destination['id_tour_operator'], $destination['imgPath'], $destination['description']);
     
     include('../../partials/cardsDestination.php');
 
  }
 
-  // foreach ($test as $test) {
-  //   $destinations = new Destination($test['id'], $test['location'], $test['price'], $test['id_tour_operator'], $test['imgPath']);
-  //   // echo '<pre>' . var_export($destinations, true) . '</pre>';
-
-
-  // }
-  
   ?>
 
  

@@ -1,83 +1,60 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>ComparOperator</title>
-    <?php require('../../partials/links.php'); ?>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>ComparOperator</title>
+
+  <?php require('../../partials/links.php'); ?>
+  <?php require('../../assets/bdd/bdd.php'); ?>
+
+
+
 </head>
 
 <body>
 
-    <?php include('../../partials/header.php'); ?>
-    <a href="index.php" class="btn btn-primary">Retour</a>
-
-    <div class="container bg-white card bordure">
-        <div class="row shadow-lg align-items-center padding">
-            <div class="col-sm-4 text-center">
-
-
-
-
-            </div>
-            <div class="col-sm-8 text-center">
-                <!--Titre-->
-                <h2 class="text-left titre">Le Domaine de Ker-Ys</h2>
+  <?php
+  include('../../partials/header.php');
+  // Les objets  //
+  include('../../assets/objets/Manager.php');
+  include('../../assets/objets/Destination.php');
+  include('../../assets/objets/TourOperator.php');
+  include('../../assets/objets/Review.php');
 
 
-            </div>
-            <div class="col-sm-12 text-center">
-                <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <img class="d-block w-50" src="https://image.camping-and-co.com/photos/1935/camping-domaine-de-ker-ys_1485188945_xl.jpg" alt="First slide">
-                        </div>
-                        <div class="carousel-item">
-                            <img class="d-block w-50" src="https://www.camping-ledomainedekerys.fr/wp-content/uploads/sites/14/2016/04/camping-st-nic-vue-aerienne.jpg" alt="Second slide">
-                        </div>
-                        <div class="carousel-item">
-                            <img class="d-block w-50" src="https://api.tourism-system.com/resize/clip/782/400/80/aHR0cDovL2JyZXRhZ25lLm1lZGlhLnRvdXJpbnNvZnQuZXUvdXBsb2FkL0NhbXBpbmctRG9tYWluZS1kZS1LZXItWXMtMTguanBn/image.jpg" alt="Third slide">
-                        </div>
-                    </div>
-                    <a class="carousel-control-prev" href="#carouselExampleControls` + i + `" role="button" data-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="sr-only">Previous</span>
-                    </a>
-                    <a class="carousel-control-next" href="#carouselExampleControls` + i + `" role="button" data-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="sr-only">Next</span>
-                    </a>
-                </div>
+ $destination = $_POST['destination'];
+  $manager = new Manager($db);
+  $test = $manager->getOperatorByDestination($destination);
 
-            </div>
-        </div>
+  ?>
+
+<div class="row">
+  <?php
+  foreach ($test as $test) {
+  $reviews = $manager->getReviewByOperatorId($test['id']);
+
+    $operators = new TourOperator($test['id'], $test['name'], $test['grade'], $test['link'], $test['is_premium']);
+    echo '<pre>' . var_export($reviews, true) . '</pre>';
+    
+    foreach($reviews as $review)
+    {
+      $test2 = new Review($review['id'], $review['message'], $review['author'], $review['id_tour_operator']);
+    echo '<pre>' . var_export($review['message'], true) . '</pre>';
+      
+    }
+    include('../../partials/cardsTourOperator.php');
+
+ }
+
+  ?>
+
+ 
+</div>
 
 
-        <div class="row">
-            <div class='col-sm-4'>
-                <div class='card mb-4 shadow-sm text-center'>
-                    <h2 class='text-center'>" . $test['location'] . "</h2>
-                    <div class='col-lg-12'>
-                        <hr>
-                    </div>
-                    <div class='card-body'>
-                        <img src='../../assets/images/" . $test[' imgPath'] . ".jpg' class='img-fluid' alt='Responsive image'>
-      <div class='col-lg-12'>
-        <hr>
-    </div>
-          <p class='card-text text-center'>" . $test['description'] . "</p>
-          <div class='col-lg-12'>
-        <hr>
-    </div>
-          <div class='text-center'>
-          </div>
-          
-          </div>
-          </div>
-    </div>
-    </div>
 
     </div>
 
@@ -86,11 +63,10 @@
 
 
 
+<?php include('../../partials/footer.php'); ?>
 
-    <?php include('../../partials/footer.php'); ?>
+<?php require('../../partials/scripts.php'); ?>
 
 
 </body>
-<?php require('../../partials/scripts.php'); ?>
-
 </html>
