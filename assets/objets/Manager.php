@@ -107,7 +107,7 @@ class Manager {
 // Crée un opérateur //
     public function createTourOperator($name, $grade, $link)
     {
-        $reponse = $this->bdd->prepare('INSERT INTO tour_opérators (name, grade, link)
+        $reponse = $this->bdd->prepare('INSERT INTO tour_operators (name, grade, link)
                                         VALUES (?,?,?)
                                         ');
         $reponse->execute(array(

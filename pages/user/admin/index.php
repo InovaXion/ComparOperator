@@ -31,9 +31,11 @@
 
 
     $manager = new Manager($db);
-
-    $to = $manager->getAllOperator();
-    echo '<pre>' . var_export($to, true) . '</pre>';
+    $tourOps = $manager->getAllOperator();
+    // echo '<pre>' . var_export($tourOps, true) . '</pre>';
+    foreach ($tourOps as $tourOp){
+        echo $tourOp['name'];
+    }
     ?>
 <div class="header">
 
@@ -59,6 +61,17 @@
 </div>
 
     <h1>Session Administrateur</h1>
+    
+    <?php 
+    if ($_GET['success'] == 1){
+        echo "Création de Tour Opérateur réussi";
+    } else if ($_GET['success'] == 2){
+        echo "Création de destination Réussi";
+    } else if ($_GET['success'] == 3){
+        echo "Mise à jour Premium Réussi";
+    } else if{};
+    
+    ?>
 
 
 
@@ -67,20 +80,20 @@
             <img class="card-img-top" src="http://www.explora5terre.it/wp-content/uploads/2016/06/logo_fc.png" alt="Card image cap">
             <div class="card-body">
                 <h5 class="card-title">Créer un Tour Opérateur</h5>
-                <form>
+                <form action="traitements/createTo.php" method="POST">
                     <div class="form-group">
                         <label for="exampleFormControlInput1">Nom opérateur</label>
 
-                        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="nom opérateur">
+                        <input name="name" type="text" class="form-control" id="exampleFormControlInput1" placeholder="nom opérateur">
                     </div>
                     <div class="form-group">
                         <label for="exampleFormControlInput1">Link</label>
 
-                        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="link">
+                        <input name="link" type="url" class="form-control" id="exampleFormControlInput1" placeholder="link">
                     </div>
                     <div class="form-group">
                         <label for="exampleFormControlSelect1">Étoiles</label>
-                        <select class="form-control" id="exampleFormControlSelect1">
+                        <select name="grade" class="form-control" id="exampleFormControlSelect1">
                             <option>1</option>
                             <option>2</option>
                             <option>3</option>
@@ -88,13 +101,14 @@
                             <option>5</option>
                         </select>
                     </div>
-                </form>
+                
                 <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium, possimus!
                     Blanditiis corrupti at a nam voluptates voluptatibus nulla architecto. Possimus aperiam odio magni
                     veritatis assumenda quasi necessitatibus quo libero deleniti?</p>
                 
             </div>
-            <button type="button" class="btn btn-success btn-lg btn-block">Créer</button>
+            <button type="submit" class="btn btn-success btn-lg btn-block">Créer</button>
+            </form>
         </div>
 
 
