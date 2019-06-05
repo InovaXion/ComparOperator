@@ -1,6 +1,6 @@
 <div class="header">
 
-    <a href="#" class="logo"><img id="logo" src="../../assets/images/logo.png" alt="logo"></a>
+    <a href="../../../../pages/user" class="logo"><img id="logo" src="../../assets/images/logo.png" alt="logo"></a>
 
 
     <div class="header-right">
