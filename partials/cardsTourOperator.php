@@ -14,59 +14,67 @@ echo
                 echo '<i class="fas fa-star"></i>  ';
             }
         }
+        if ($operators->getIsPremium() == 1){
+             echo 
+             "
+                <p>PREMIUM</p>
+             ";
+        } else {
+            echo 
+            "
+            <p>STANDARD</p>
+
+            ";
+        }
         echo "
         
         </div>
-            <div class='col-lg-12'> <hr>
-            
-            </div>
-                <div class='card-body'>
-                   
+            <div class='col-lg-12'> <hr>";
                     
-                    <div class='col-lg-12'> <hr>
+if ($operators->getIsPremium() == 1){
+    echo 
+    "
+                       <form action='". $operators->getLink() ."' method=''>
+                       <button type='submit' class='btn btn-secondary btn-lg btn-block'>Découvrir</button>
+                        </form>
+    ";
+} else {
+    echo 
+    "
+    <button type='button' class='btn btn-dark btn-lg btn-block'>Pas de site</button>
+    ";
+}
+           echo "</div>
+                <div class='card-body'>
+                    <div class='col-lg-12'>
                         </div>
-                    <p class='card-text text-center'>Prix : " . $operatorByDestination['price'] . "€</p>
+                   
                     <hr>";
                     if ($review->getId_tour_operator() == $operators->getId()){
                         echo 
                         "
-                        <p>" . $review->getAuthor() . " à dit : ". $review->getMessage() ."</p> <br>
+                        <div class='border-secondary border rounded'>" . $review->getAuthor() . " : ". $review->getMessage() ."</div> <hr>
                         ";
                     }
                     echo "
 
 
-                    <form class='bordures' action='' method=''>
+                    <form class='bordures' action='commentTourOp.php' method='POST'>
                     <div class='form-group'>
-                      <label for='exampleInputEmail1'>Pseudo</label>
-                      <input name='author' type='text' class='form-control' id='exampleInputEmail1' aria-describedby='emailHelp' placeholder='Pseudo'>
-                    </div>
-                    <div class='form-group'>
-                      <label for='exampleInputPassword1'>Message</label>
-                      <input name='message' type='text' class='form-control' id='exampleInputPassword1' placeholder='Message'>
-                    </div>
-               
+                    <input type='hidden' value='" . $operators->getName() . "' name='tourOp' />
+                    <button type='submit' class='cta'>Laissez un commentaire !</button>
                     
-                    
-                    <div class='cta-container transition'><a href='#' class='cta'>Valider</a></div>
-                    <div class='card_circle transition'></div>
+                    </div>
                     </form>
-
-
-
-
-
+                    <div class='circle float-right'>
+                    <span class='circle_text'>" . $operatorByDestination['price'] . "€</span>
+                   </div>
+                   
+                    
 
 ";
-          
-if ($operators->getIsPremium() == 1){
-    echo 
-    "
-                       <form action='". $operators->getLink() ."' method=''><br>
-                       <button type='button' class='btn btn-secondary btn-lg btn-block'>Voir le site</button>
-                        </form>
-    ";
-}
+
+
 
 
 
