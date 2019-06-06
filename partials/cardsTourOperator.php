@@ -23,7 +23,7 @@ echo
                 <div class='card-body'>
                    
                     
-                    <div class='col-lg-12'> <hr>
+                    <div class='col-lg-12'> 
                         </div>
                     <p class='card-text text-center'>Prix : " . $operatorByDestination['price'] . "€</p>
                     <hr>";
