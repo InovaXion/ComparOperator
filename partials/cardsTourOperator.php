@@ -45,7 +45,11 @@ echo
                       <label for='exampleInputPassword1'>Message</label>
                       <input name='message' type='text' class='form-control' id='exampleInputPassword1' placeholder='Message'>
                     </div>
-                    <button type='button' class='btn btn-success'>Valider</button>
+               
+                    
+                    
+                    <div class='cta-container transition'><a href='#' class='cta'>Valider</a></div>
+                    <div class='card_circle transition'></div>
                     </form>
 
 

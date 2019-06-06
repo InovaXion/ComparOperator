@@ -1,10 +1,12 @@
 .header {
-    overflow: hidden;
-    background-image: url(http://www.bikinietdentelle.com/wp-content/themes/source/images/header.png);
+    overflow: hidden; 
+    background-image: url(https://www.tcs.ch/assets/img/header-pictures/camping-reisen/reiseinformationen/laenderinfos/weblication/wThumbnails/vereinigte-arabische-emirate-63f9e178448924bgd25c79ce34f42c77.jpg);
     background-position-y: -20px;
     padding: 20px 10px;
     margin-bottom: 30px;
-   
+    background-repeat: no-repeat;
+    background-size: cover;
+    
 }
 
 .header a {
@@ -16,6 +18,7 @@
     font-size: 18px;
     line-height: 25px;
     border-radius: 4px;
+    
 }
 
 .header a.logo {

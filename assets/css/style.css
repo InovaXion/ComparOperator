@@ -5,16 +5,37 @@
 body {
   overflow-x: hidden;
   margin: 0px;
+  cursor: pointer;
+
   font-family: Arial, Helvetica, sans-serif;
   background-attachment: fixed;
-  background-image: url(http://www.code-couleur.com/images/main/sable-texture.jpg);
+  background-image: url(https://www.tcs.ch/assets/img/camping-reisen/reiseinformationen/laenderinfos/afrika/marokko/weblication/wThumbnails/marokko-01-3522c1c45739087g42f5b0424337c3d2.jpg);
+  background-size: cover;
 }
 
-
-.carousel-inner img{
-  margin:auto;
+.carousel-inner img {
+  margin: auto;
 }
 
-.bordures {
-  border: solid;
+.card {
+  transform: scale(1);
+  transition: 0.3s ease-in-out;
+  background-color: #fff8dc !important;
+  
+}
+.card:hover {
+  transform: scale(1.05);
+  transition: 0.3s ease-in-out;
+}
+
+.cta {
+  color: #fff;
+  border: 2px solid #daa520;
+  border: 2px solid;
+  background-color: #daa520;
+  padding: 10px 25px;
+  border-radius: 50px;
+  font-size: 17px;
+  text-decoration: none;
+  font-weight: bold;
 }
