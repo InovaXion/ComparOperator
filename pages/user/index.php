@@ -13,7 +13,6 @@
 
 
 </head>
-
 <body>
 
   <?php
@@ -30,8 +29,9 @@
   $destinations = $manager->getAllDestination();
 
   ?>
-
+<hr>
 <div class="row">
+
   <?php
   foreach ($destinations as $destination) {
 

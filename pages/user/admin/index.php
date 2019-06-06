@@ -45,18 +45,6 @@
         <a href="index.php" class="logo"><img id="logo" src="../../../assets/images/logo.png" alt="logo"></a>
 
 
-<<<<<<< HEAD
-<div class="header-right">
-    <h1>Compare Operator </h1>
-    <a href="index.php">Accueil</a>
-    <a href="#messages">Messages</a>
-    <a href="#profil">Profil</a>
-    <a href="inscription.php">S'inscrire</a>
-    <form class="form-inline my-2 my-lg-0">
-        <input class="form-control mr-sm-2" type="search" placeholder="recherche" aria-label="Search">
-        <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Rechercher</button>
-    </form>
-=======
         <div class="header-right">
             <h1>Compare Operator </h1>
             <a href="index.php">Accueil</a>
@@ -67,7 +55,6 @@
                 <input class="form-control mr-sm-2" type="search" placeholder="recherche" aria-label="Search">
                 <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Rechercher</button>
             </form>
->>>>>>> 0863938721351928afd9319d7a34d65c6e81a158
 
         </div>
     </div>
@@ -124,9 +111,11 @@
                     <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium, possimus!
                         Blanditiis corrupti at a nam voluptates voluptatibus nulla architecto. Possimus aperiam odio magni
                         veritatis assumenda quasi necessitatibus quo libero deleniti?</p>
-
+                    <div class='cta-container transition'><a href='#' class='cta'>Créer</a></div>
+                    <div class='card_circle transition'></div>
             </div>
-            <button type="submit" class="btn btn-success btn-lg btn-block">Créer</button>
+
+
             </form>
         </div>
 
@@ -138,9 +127,9 @@
                     <div class="form-group">
                         <label for="exampleFormControlInput1">Destination</label>
                         <select name="location" class="form-control" id="exampleFormControlSelect1">
-                        <?php foreach ($destinations as $destination) {
-                              echo "<option>" . $destination['location'] . "<option>";
-                              } ?>
+                            <?php foreach ($destinations as $destination) {
+                                echo "<option>" . $destination['location'] . "<option>";
+                            } ?>
                         </select>
                     </div>
                     <div class="form-group">
@@ -150,17 +139,19 @@
                     <div class="form-group">
                         <label for="exampleFormControlInput1">Tour Opérateur</label>
                         <select name="tourOp" class="form-control" id="exampleFormControlSelect1">
-                              <?php foreach ($tourOps as $tourOp) {
-                              echo "<option>" . $tourOp['name'] . "<option>";
-                              } ?>
+                            <?php foreach ($tourOps as $tourOp) {
+                                echo "<option>" . $tourOp['name'] . "<option>";
+                            } ?>
                         </select>
                     </div>
                 </form>
                 <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium, possimus!
                     Blanditiis corrupti at a nam voluptates voluptatibus nulla architecto. Possimus aperiam odio magni
                     veritatis assumenda quasi necessitatibus quo libero deleniti?</p>
+                <div class='cta-container transition'><a href='#' class='cta'>Créer</a></div>
+                <div class='card_circle transition'></div>
             </div>
-            <button type="button" class="btn btn-success btn-lg btn-block">Créer</button>
+
         </div>
 
 
@@ -190,9 +181,11 @@
                         </select>
                     </div>
                     <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum dicta autem officia libero facere fugit labore recusandae! Deserunt qui esse tenetur sequi ullam voluptatum ex aut maiores optio, aliquam voluptates.</p>
-
+                    <div class='cta-container transition'><a href='#' class='cta'>Update</a></div>
+                    <div class='card_circle transition'></div>
             </div>
-            <button type="button" class="btn btn-success btn-lg btn-block">Update</button>
+
+
         </div>
     </div>
     <br>

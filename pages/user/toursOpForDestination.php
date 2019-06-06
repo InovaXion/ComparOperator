@@ -37,7 +37,7 @@
 <?php
 //Le carousel //
  echo "
- <div class='container bg-white bordure'>
+ <div class='container bordure'>
   <div class='row shadow-lg align-items-center padding'>
     <div class='col-sm-4 text-center'>
     </div>
