@@ -131,7 +131,7 @@ class Manager {
     }
 public function selectIdbyOperator(){
 
-}
+    }
 }
 
 
