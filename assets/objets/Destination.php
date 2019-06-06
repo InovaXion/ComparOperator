@@ -44,4 +44,8 @@ class Destination
     {
         return $this->imgPath;
     }
+    public function getDescription()
+    {
+        return $this->description;
+    }
 }

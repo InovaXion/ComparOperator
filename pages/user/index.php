@@ -35,7 +35,7 @@
   <?php
   foreach ($destinations as $destination) {
 
-    $destination1 = new Destination($destination['id'], $destination['location'], $destination['price'], $destination['id_tour_operator'], $destination['imgPath'], $destination['description']);
+    $destination = new Destination($destination['id'], $destination['location'], $destination['price'], $destination['id_tour_operator'], $destination['imgPath'], $destination['description']);
     
     include('../../partials/cardsDestination.php');
 

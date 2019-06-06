@@ -129,8 +129,16 @@ class Manager {
             $id_tour_operator
         ));                             
     }
-public function selectIdbyOperator(){
-
+// Retourne l'id d'un opérateur selectionné //
+public function getIdByOperatorName($tourOp){
+        $reponse = $this->bdd->prepare('SELECT id 
+                                        FROM tour_operators 
+                                        WHERE name = ?');
+        $reponse->execute(array(
+            $tourOp
+        ));    
+        $getId = $reponse->fetch();
+        return $getId[0];
     }
 }
 

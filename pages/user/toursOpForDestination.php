@@ -76,7 +76,7 @@
 
 $manager = new Manager($db);
 $operatorsByDestination = $manager->getOperatorByDestination($destination);
-
+// echo '<pre>' . var_export($operatorsByDestination, true) . '</pre>';
 // Les cards // 
 foreach ($operatorsByDestination as $operatorByDestination) {
   $reviewsByOperatorId = $manager->getReviewByOperatorId($operatorByDestination['0']);
