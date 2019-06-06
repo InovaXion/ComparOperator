@@ -49,3 +49,29 @@ color: grey;
 .bordure {
   background-color: transparent !important;
 }
+
+.msg{
+  border : 
+}
+
+
+
+
+
+ .circle{
+  font-family : "Montserrat";
+  display:inline-block;
+  width:70px;
+  height:70px;
+  border-radius:50%;
+  text-align:center;
+  background: #e84e1b;
+  color: white;
+} 
+
+
+.circle_text{
+  display:block;
+  padding-top:25px;
+  
+ } 
