@@ -129,9 +129,10 @@ class Manager {
             $id_tour_operator
         ));                             
     }
+public function selectIdbyOperator(){
 
 }
+}
 
-public function selectIdbyOperator()
 
 
