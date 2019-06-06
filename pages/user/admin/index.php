@@ -21,7 +21,7 @@
 <body>
 
     <?php
-    
+
     // Les objets  //
     include('../../../assets/objets/Manager.php');
     include('../../../assets/objets/Destination.php');
@@ -32,48 +32,51 @@
 
     $manager = new Manager($db);
     $tourOps = $manager->getAllOperator();
+    $destinations = $manager->getAllDestination();
+
     // echo '<pre>' . var_export($tourOps, true) . '</pre>';
-    foreach ($tourOps as $tourOp){
+    foreach ($tourOps as $tourOp) {
         echo $tourOp['name'];
     }
+
     ?>
-<div class="header">
+    <div class="header">
 
-<a href="index.php" class="logo"><img id="logo" src="../../../assets/images/logo.png" alt="logo"></a>
+        <a href="index.php" class="logo"><img id="logo" src="../../../assets/images/logo.png" alt="logo"></a>
 
 
-<div class="header-right">
-    <h1>Compare Operator </h1>
-    <a href="index.php">Accueil</a>
-    <a href="#messages">Messages</a>
-    <a href="#profil">Profil</a>
-    <a href="#inscription">S'inscrire</a>
-    <form class="form-inline my-2 my-lg-0">
-        <input class="form-control mr-sm-2" type="search" placeholder="recherche" aria-label="Search">
-        <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Rechercher</button>
-    </form>
+        <div class="header-right">
+            <h1>Compare Operator </h1>
+            <a href="index.php">Accueil</a>
+            <a href="#messages">Messages</a>
+            <a href="#profil">Profil</a>
+            <a href="#inscription">S'inscrire</a>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="recherche" aria-label="Search">
+                <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Rechercher</button>
+            </form>
 
-</div>
-</div>
+        </div>
+    </div>
 
-<div style="padding-left:20px">
+    <div style="padding-left:20px">
 
-</div>
+    </div>
 
     <h1>Session Administrateur</h1>
-    
-    <?php 
-    if (isset($_GET['success'])){
-        if ($_GET['success'] == 1){
-        echo "Création de Tour Opérateur réussi";
-    } else if ($_GET['success'] == 2){
-        echo "Création de destination Réussi";
-    } else if ($_GET['success'] == 3){
-        echo "Mise à jour Premium Réussi";
-    };
+
+    <?php
+    if (isset($_GET['success'])) {
+        if ($_GET['success'] == 1) {
+            echo "Création de Tour Opérateur réussi";
+        } else if ($_GET['success'] == 2) {
+            echo "Création de destination Réussi";
+        } else if ($_GET['success'] == 3) {
+            echo "Mise à jour Premium Réussi";
+        };
     }
-    
-    
+
+
     ?>
 
 
@@ -104,54 +107,45 @@
                             <option>5</option>
                         </select>
                     </div>
-                
-                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium, possimus!
-                    Blanditiis corrupti at a nam voluptates voluptatibus nulla architecto. Possimus aperiam odio magni
-                    veritatis assumenda quasi necessitatibus quo libero deleniti?</p>
-                
+
+                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium, possimus!
+                        Blanditiis corrupti at a nam voluptates voluptatibus nulla architecto. Possimus aperiam odio magni
+                        veritatis assumenda quasi necessitatibus quo libero deleniti?</p>
+
             </div>
             <button type="submit" class="btn btn-success btn-lg btn-block">Créer</button>
             </form>
         </div>
 
-
-
-
-
         <div class="card">
             <img class="card-img-top" src="https://www.enfant-en-voyage.com/wp-content/uploads/2015/04/panneau-des-pays-destination.jpg" alt="Card image cap">
             <div class="card-body">
                 <h5 class="card-title">Créer une destination</h5>
-                <form>
+                <form action="" method="POST">
                     <div class="form-group">
                         <label for="exampleFormControlInput1">Destination</label>
-
-                        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Destination">
+                        <select name="location" class="form-control" id="exampleFormControlSelect1">
+                        <?php foreach ($destinations as $destination) {
+                              echo "<option>" . $destination['location'] . "<option>";
+                              } ?>
+                        </select>
                     </div>
                     <div class="form-group">
                         <label for="exampleFormControlInput1">Prix</label>
-                        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Prix">
+                        <input name="price" type="text" class="form-control" id="exampleFormControlInput1" placeholder="Prix">
                     </div>
-
-                    
-                    
                     <div class="form-group">
                         <label for="exampleFormControlInput1">Tour Opérateur</label>
-                    
-                    <select class="form-control" id="exampleFormControlSelect1">
-
-                        <option>...</option>
-                        <option>...</option>
-
-                    </select>
+                        <select name="tourOp" class="form-control" id="exampleFormControlSelect1">
+                              <?php foreach ($tourOps as $tourOp) {
+                              echo "<option>" . $tourOp['name'] . "<option>";
+                              } ?>
+                        </select>
                     </div>
                 </form>
-
                 <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium, possimus!
                     Blanditiis corrupti at a nam voluptates voluptatibus nulla architecto. Possimus aperiam odio magni
                     veritatis assumenda quasi necessitatibus quo libero deleniti?</p>
-
-              
             </div>
             <button type="button" class="btn btn-success btn-lg btn-block">Créer</button>
         </div>
@@ -164,15 +158,15 @@
             <div class="card-body">
                 <h5 class="card-title">Premium</h5>
                 <form>
-                <div class="form-group">
+                    <div class="form-group">
                         <label for="exampleFormControlInput1">Tour Opérateur</label>
-                   
-                    <select class="form-control" id="exampleFormControlSelect1">
 
-                        <option>...</option>
-                        <option>...</option>
+                        <select class="form-control" id="exampleFormControlSelect1">
 
-                    </select>
+                            <option>...</option>
+                            <option>...</option>
+
+                        </select>
                     </div>
                     <div class="form-group">
                         <label for="exampleFormControlSelect1">Premium</label>
@@ -183,12 +177,12 @@
                         </select>
                     </div>
                     <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum dicta autem officia libero facere fugit labore recusandae! Deserunt qui esse tenetur sequi ullam voluptatum ex aut maiores optio, aliquam voluptates.</p>
-                    
+
             </div>
             <button type="button" class="btn btn-success btn-lg btn-block">Update</button>
         </div>
     </div>
-<br>
+    <br>
 
 
 
