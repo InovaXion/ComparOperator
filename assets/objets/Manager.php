@@ -116,4 +116,22 @@ class Manager {
             $link
         ));
     }
+
+// POUR ELODIE : Crée une Destination //
+    public function createDestination($destination, $prix, $id_tour_operator)
+    {
+        $reponse = $this->bdd->prepare('INSERT INTO destinations (location, price, id_tour_operator)
+                                        VALUES (?,?,?) 
+                                         ');
+        $reponse->execute(array(
+            $destination,
+            $prix,
+            $id_tour_operator
+        ));                             
+    }
+
 }
+
+public function selectIdbyOperator()
+
+

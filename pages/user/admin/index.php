@@ -63,13 +63,16 @@
     <h1>Session Administrateur</h1>
     
     <?php 
-    if ($_GET['success'] == 1){
+    if (isset($_GET['success'])){
+        if ($_GET['success'] == 1){
         echo "Création de Tour Opérateur réussi";
     } else if ($_GET['success'] == 2){
         echo "Création de destination Réussi";
     } else if ($_GET['success'] == 3){
         echo "Mise à jour Premium Réussi";
-    } else if{};
+    };
+    }
+    
     
     ?>
 
