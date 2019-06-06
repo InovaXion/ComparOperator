@@ -36,7 +36,11 @@
     ?>
     <div class="header">
 
+<<<<<<< HEAD
         <a href="../index.php" class="logo"><img id="logo" src="../../../assets/images/logo.png" alt="logo"></a>
+=======
+        <a href="index.php" class="logo"><img id="logo" src="../../../assets/images/logo.png" alt="logo"></a>
+>>>>>>> 1436a578a57e0f788c6179868340b562426a4284
 
 
         <div class="header-right">
@@ -105,9 +109,11 @@
                     <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium, possimus!
                         Blanditiis corrupti at a nam voluptates voluptatibus nulla architecto. Possimus aperiam odio magni
                         veritatis assumenda quasi necessitatibus quo libero deleniti?</p>
-
+                    <div class='cta-container transition'><a href='#' class='cta'>Créer</a></div>
+                    <div class='card_circle transition'></div>
             </div>
-            <button type="submit" class="btn btn-success btn-lg btn-block">Créer</button>
+
+
             </form>
         </div>
 
@@ -119,9 +125,15 @@
                     <div class="form-group">
                         <label for="exampleFormControlInput1">Destination</label>
                         <select name="location" class="form-control" id="exampleFormControlSelect1">
+<<<<<<< HEAD
                         <?php foreach ($destinations as $destination) {
                               echo "<option>" . $destination['location'] . "</option>";
                               } ?>
+=======
+                            <?php foreach ($destinations as $destination) {
+                                echo "<option>" . $destination['location'] . "<option>";
+                            } ?>
+>>>>>>> 1436a578a57e0f788c6179868340b562426a4284
                         </select>
                     </div>
                     <div class="form-group">
@@ -131,18 +143,30 @@
                     <div class="form-group">
                         <label for="exampleFormControlInput1">Tour Opérateur</label>
                         <select name="tourOp" class="form-control" id="exampleFormControlSelect1">
+<<<<<<< HEAD
                               <?php foreach ($tourOps as $tourOp) {
                               echo "<option>" . $tourOp['name'] . "</option>";
                               } ?>
+=======
+                            <?php foreach ($tourOps as $tourOp) {
+                                echo "<option>" . $tourOp['name'] . "<option>";
+                            } ?>
+>>>>>>> 1436a578a57e0f788c6179868340b562426a4284
                         </select>
                     </div>
                
                 <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium, possimus!
                     Blanditiis corrupti at a nam voluptates voluptatibus nulla architecto. Possimus aperiam odio magni
                     veritatis assumenda quasi necessitatibus quo libero deleniti?</p>
+                <div class='cta-container transition'><a href='#' class='cta'>Créer</a></div>
+                <div class='card_circle transition'></div>
             </div>
+<<<<<<< HEAD
             <button type="submit" class="btn btn-success btn-lg btn-block">Créer</button>
             </form>
+=======
+
+>>>>>>> 1436a578a57e0f788c6179868340b562426a4284
         </div>
 
 
@@ -171,10 +195,16 @@
                         </select>
                     </div>
                     <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum dicta autem officia libero facere fugit labore recusandae! Deserunt qui esse tenetur sequi ullam voluptatum ex aut maiores optio, aliquam voluptates.</p>
-
+                    <div class='cta-container transition'><a href='#' class='cta'>Update</a></div>
+                    <div class='card_circle transition'></div>
             </div>
+<<<<<<< HEAD
             <button type="submit" class="btn btn-success btn-lg btn-block">Update</button>
             </form>
+=======
+
+
+>>>>>>> 1436a578a57e0f788c6179868340b562426a4284
         </div>
     </div>
     <br>

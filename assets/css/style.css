@@ -5,7 +5,7 @@
 body {
   overflow-x: hidden;
   margin: 0px;
-  cursor: pointer;
+   
 
   font-family: Arial, Helvetica, sans-serif;
   background-attachment: fixed;
@@ -15,12 +15,14 @@ body {
 
 .carousel-inner img {
   margin: auto;
+  margin-bottom: 20px;
 }
 
 .card {
   transform: scale(1);
   transition: 0.3s ease-in-out;
   background-color: #fff8dc !important;
+  
   
 }
 .card:hover {
@@ -38,4 +40,12 @@ body {
   font-size: 17px;
   text-decoration: none;
   font-weight: bold;
+}
+.cta:hover{
+border: 2px solid #daa520;
+color: grey;
+
+}
+.bordure {
+  background-color: transparent !important;
 }
