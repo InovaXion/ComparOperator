@@ -1,3 +1,15 @@
+<?php
+    // vérification admin //
+   
+
+    $motDePasseQuiAeteEnvoye = $_POST['mdp'];
+    
+    if ($motDePasseQuiAeteEnvoye !='elodie'){
+header('Location: index.php/?error=1');
+die;
+    }
+    
+    ?>
 <!DOCTYPE html>
 <html lang="fr">
 
