@@ -8,7 +8,7 @@
         <a href="index.php">Accueil</a>
         <a href="#messages">Messages</a>
         <a href="#profil">Profil</a>
-        <a href="#inscription">S'inscrire</a>
+        <a href="inscription.php">S'inscrire</a>
         <form class="form-inline my-2 my-lg-0">
             <input class="form-control mr-sm-2" type="search" placeholder="recherche" aria-label="Search">
             <button class="btn btn-secondary my-2 my-sm-0" type="submit">Rechercher</button>
