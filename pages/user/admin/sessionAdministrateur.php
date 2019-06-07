@@ -13,25 +13,16 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
     <?php require('../../../assets/bdd/bdd.php'); ?>
-
+  
 
 
 </head>
 
 <body>
 
+
+
     <?php
-    // vérification admin //
-   
-
-    $motDePasseQuiAeteEnvoye = $_POST['mdp'];
-    
-    if ($motDePasseQuiAeteEnvoye !='elodie'){
-header('Location: index.php/?error=1');
-die;
-    }
-
-
     // Les objets //
     include('../../../assets/objets/Manager.php');
     include('../../../assets/objets/Destination.php');
@@ -115,7 +106,7 @@ die;
                     <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium, possimus!
                         Blanditiis corrupti at a nam voluptates voluptatibus nulla architecto. Possimus aperiam odio magni
                         veritatis assumenda quasi necessitatibus quo libero deleniti?</p>
-                    <div class='cta-container transition'><a href='#' class='cta'>Créer</a></div>
+                    <button class="btn btn-warning" type="submit">Créer</button>
                     <div class='card_circle transition'></div>
             </div>
 
@@ -132,7 +123,7 @@ die;
                         <label for="exampleFormControlInput1">Destination</label>
                         <select name="location" class="form-control" id="exampleFormControlSelect1">
                             <?php foreach ($destinations as $destination) {
-                                echo "<option>" . $destination['location'] . "<option>";
+                                echo "<option>" . $destination['location'] . "</option>";
                             } ?>
                         </select>
                     </div>
@@ -144,7 +135,7 @@ die;
                         <label for="exampleFormControlInput1">Tour Opérateur</label>
                         <select name="tourOp" class="form-control" id="exampleFormControlSelect1">
                             <?php foreach ($tourOps as $tourOp) {
-                                echo "<option>" . $tourOp['name'] . "<option>";
+                                echo "<option>" . $tourOp['name'] . "</option>";
                             } ?>
                         </select>
                     </div>
@@ -152,8 +143,9 @@ die;
                     <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium, possimus!
                         Blanditiis corrupti at a nam voluptates voluptatibus nulla architecto. Possimus aperiam odio magni
                         veritatis assumenda quasi necessitatibus quo libero deleniti?</p>
-                    <div class='cta-container transition'><a href='#' class='cta'>Créer</a></div>
+                        <button class="btn btn-warning" type="submit">Créer</button>
                     <div class='card_circle transition'></div>
+                        </form>
             </div>
         </div>
 
@@ -183,10 +175,10 @@ die;
                         </select>
                     </div>
                     <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum dicta autem officia libero facere fugit labore recusandae! Deserunt qui esse tenetur sequi ullam voluptatum ex aut maiores optio, aliquam voluptates.</p>
-                    <div class='cta-container transition'><a href='#' class='cta'>Update</a></div>
+                    <button class="btn btn-warning" type="submit">Créer</button>
                     <div class='card_circle transition'></div>
             </div>
-
+                        </form>
 
         </div>
     </div>

@@ -1,3 +1,11 @@
+<?php if (isset($_GET['success'])){
+    if ($_GET['success'] == 1 OR $_GET['success'] == 2 OR $_GET['success'] == 3){
+      $SESSION['mdp'] = 'elodie';
+      header('Location: sessionAdministrateur.php');
+    }
+}
+
+?>
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -38,7 +46,7 @@
       <a href="../index.php">Accueil</a>
       <a href="#messages">Messages</a>
       <a href="#profil">Profil</a>
-      <a href="#inscription">S'inscrire</a>
+      <a href="#inscription">Administration</a>
       <form class="form-inline my-2 my-lg-0">
         <input class="form-control mr-sm-2" type="search" placeholder="recherche" aria-label="Search">
         <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Rechercher</button>
@@ -54,13 +62,15 @@
           <i class="icon-white fas fa-users fa-3x"></i>
         </div>
         <div class="vertical-align title-text">
-          Authentification
+          
           <?php
-           if (isset($_GET['ERROR'])) {
+           if (isset($_GET['error'])) {
 
-            if ($_GET['ERROR'] == 1) {
-              echo "echec de l'authentification";
+            if ($_GET['error'] == 1) {
+              echo "Erreur authentification";
             }
+           } else {
+             echo "Authentification";
            }
 
           ?>
@@ -69,8 +79,8 @@
       <div class="content vertical-align center size-100-prc">
         <div class="vertical-align center columns width-75-prc height-100-prc">
 
-          <form method="POST" action="sessionAdministrateur.php">
-            <input name="mdp" class="custom-input margin-bottom-40-px margin-top-40-px height-60-px width-80-prc padding-10-px font-input" placeholder="Mot de passe" />
+          <form method="POST" action="traitements/checkAdmin.php">
+            <input name="mdp" type="password" class="custom-input margin-bottom-40-px margin-top-40-px height-60-px width-80-prc padding-10-px font-input" placeholder="Mot de passe" />
             <button type="submit" class="vertical-align center title-text width-100-prc height-80-px rounded-light bg-purple-complement margin-bottom-40-px">Suivant</button>
           </form>
         </div>
