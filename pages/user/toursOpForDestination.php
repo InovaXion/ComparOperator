@@ -25,6 +25,12 @@
   include('../../assets/objets/TourOperator.php');
   include('../../assets/objets/Review.php');
 
+// if (isset($_POST['destination'])&&isset($_POST['imgPath'])){
+//     session_start();
+//     $_SESSION['destination'] = $_POST['destination'];
+//     $_SESSION['imgPath'] = $_POST['imgPath'];
+// }
+
 
  $destination = $_POST['destination'];
  $imgPath = $_POST['imgPath'];

@@ -19,7 +19,8 @@ class Manager {
 // Retourne toutes les destinations //
     public function getAllDestination()
     {
-        $reponse = $this->bdd->query('SELECT * FROM destinations WHERE id_tour_operator = 10');
+        $reponse = $this->bdd->query('SELECT * FROM destinations 
+                                      WHERE id_tour_operator = 10');
         $allDestinations = $reponse->fetchAll();
         return $allDestinations;
     }
@@ -28,14 +29,15 @@ class Manager {
     public function getOperatorByDestination(string $destination)
     {
         $reponse = $this->bdd->prepare('SELECT * FROM tour_operators
-                                    INNER JOIN destinations
-                                    WHERE  destinations.location = ?
-                                    AND destinations.id_tour_operator = tour_operators.id
-                                    AND tour_operators.id != 10
-                                            ');
+                                        INNER JOIN destinations
+                                        WHERE  destinations.location = ?
+                                        AND destinations.id_tour_operator = tour_operators.id
+                                        AND tour_operators.id != 10
+                                      ');
         $reponse->execute(array(
-            $destination
-        ));
+                        $destination
+                        ));
+
         $operatorByDestination = $reponse->fetchAll();
         return $operatorByDestination;
     }
@@ -53,24 +55,19 @@ class Manager {
         
     }
 
-// Retourne  le/les review.s pour un opérateur selectionné //
+// Retourne  le/les review.s pour un opérateur selectionné ordonné par dernier en date limité à 3 //
     public function getReviewByOperatorId($id_tour_operator)
     {
-        $reponse = $this->bdd->prepare('SELECT * FROM reviews WHERE id_tour_operator = ?');
+        $reponse = $this->bdd->prepare('SELECT * FROM reviews
+                                        WHERE id_tour_operator = ?
+                                        ORDER BY id DESC LIMIT 3
+                                       ');
         $reponse->execute(array(
             $id_tour_operator
         ));
         $getReviewByOperatorId = $reponse->fetchAll();
         return $getReviewByOperatorId;
     }
-
-// // Retourne toutes les destinations //
-// public function getAllDestination()
-// {
-//     $reponse = $this->bdd->query('SELECT * FROM destinations WHERE id_tour_operator = 10');
-//     $allDestinations = $reponse->fetchAll();
-//     return $allDestinations;
-// }
 
 
     // Retourne tout les opérateurs //
@@ -117,7 +114,7 @@ class Manager {
         ));
     }
 
-// POUR ELODIE : Crée une Destination //
+// Crée une Destination //
     public function createDestination($destination, $prix, $id_tour_operator)
     {
         $reponse = $this->bdd->prepare('INSERT INTO destinations (location, price, id_tour_operator)
