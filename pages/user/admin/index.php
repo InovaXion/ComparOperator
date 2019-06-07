@@ -1,11 +1,3 @@
-<?php if (isset($_GET['success'])){
-    if ($_GET['success'] == 1 OR $_GET['success'] == 2 OR $_GET['success'] == 3){
-      $SESSION['mdp'] = 'elodie';
-      header('Location: sessionAdministrateur.php');
-    }
-}
-
-?>
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -64,9 +56,9 @@
         <div class="vertical-align title-text">
 
           <?php
-          if (isset($_GET['ERROR'])) {
+          if (isset($_GET['error'])) {
 
-            if ($_GET['ERROR'] == 1) {
+            if ($_GET['error'] == 1) {
               echo "<p>Error Authentification</p>";
             }
           } else {

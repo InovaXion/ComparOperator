@@ -1,15 +1,3 @@
-<?php
-    // vérification admin //
-   
-
-    $motDePasseQuiAeteEnvoye = $_POST['mdp'];
-    
-    if ($motDePasseQuiAeteEnvoye !='elodie'){
-header('Location: index.php/?error=1');
-die;
-    }
-    
-    ?>
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -87,7 +75,7 @@ die;
     ?>
 
 
-
+<br><br>
     <div class="card-deck">
         <div class="card">
             <img class="card-img-top" src="http://www.explora5terre.it/wp-content/uploads/2016/06/logo_fc.png" alt="Card image cap">

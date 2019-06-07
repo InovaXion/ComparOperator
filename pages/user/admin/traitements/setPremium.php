@@ -22,4 +22,4 @@ if ($_POST['premium'] == 'oui'){
     $manager->updateOperatorToNoPremium($idTourOp);
 }
 
-header('Location: ../?success=3');
+header('Location: ../sessionAdministrateur.php?success=3');

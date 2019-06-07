@@ -19,4 +19,4 @@ $idTourOp = $manager->getIdByOperatorName($tourOpName);
 $manager->createDestination($location, $price, $idTourOp);
 
 
-header('Location: ../?success=2');
+header('Location: ../sessionAdministrateur.php?success=2');

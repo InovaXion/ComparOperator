@@ -19,4 +19,4 @@ $link = $_POST['link'];
 $manager->createTourOperator($name, $grade, $link);
 
 
-header('Location: ../?success=1');
+header('Location: ../sessionAdministrateur.php?success=1');
