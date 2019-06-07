@@ -1,20 +1,16 @@
 <?php
-
-
-
-
 echo 
 "
 <div style='margin-top: 30px' class='col-sm-4'>
-
     <div class='card mb-4 shadow-sm text-center'>
         <h2 class='text-center'>" . $operators->getName() . "</h2><div class='grade'>";
-        if ($operators->getGrade() != 0) {
-            for ($i = 0; $i < $operators->getGrade(); $i++) {
-                echo '<i class="fas fa-star"></i>  ';
+            // Affiche le nbs d'étoiles s'il y en a //
+            if ($operators->getGrade() != 0) {
+                for ($i = 0; $i < $operators->getGrade(); $i++) {
+                    echo '<i class="fas fa-star"></i>  ';
+                }
             }
-        }
-        if ($operators->getIsPremium() == 1){
+            if ($operators->getIsPremium() == 1){
              echo 
              "
                 <p>PREMIUM</p>
@@ -44,18 +40,22 @@ if ($operators->getIsPremium() == 1){
     <button type='button' class='btn btn-dark btn-lg btn-block'>Pas de site</button>
     ";
 }
-           echo "</div>
-                <div class='card-body'>
+echo "</div>
+                <div class='card-body'><
                     <div class='col-lg-12'>
                         </div>
                    
                     <hr>";
-                    if ($review->getId_tour_operator() == $operators->getId()){
-                        echo 
+
+                    // Affiche tout les reviews propre à l'opérateur //
+                            foreach($reviewsByOperatorId as $reviewByOperatorId){
+                            $review = new Review($reviewByOperatorId['id'], $reviewByOperatorId['message'], $reviewByOperatorId['author'], $reviewByOperatorId['id_tour_operator']);
+
+                                echo 
                         "
-                        <div class='border-secondary border rounded'>" . $review->getAuthor() . " : ". $review->getMessage() ."</div> <hr>
-                        ";
-                    }
+                        <div class='border-secondary border rounded'>". $review->getAuthor() ." : ". $review->getMessage() ."</div> <hr>
+                        ";}
+                    
                     echo "
 
 
@@ -69,19 +69,7 @@ if ($operators->getIsPremium() == 1){
                     <div class='circle float-right'>
                     <span class='circle_text'>" . $operatorByDestination['price'] . "€</span>
                    </div>
-                   
-                    
-
-";
-
-
-
-
-
-
-echo
-"
-                    </div>
+                </div>
                 </div>
     </div>
 

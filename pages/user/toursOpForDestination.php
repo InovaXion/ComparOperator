@@ -84,9 +84,6 @@ foreach ($operatorsByDestination as $operatorByDestination) {
 
     $operators = new TourOperator($operatorByDestination['0'], $operatorByDestination['name'], $operatorByDestination['grade'], $operatorByDestination['link'], $operatorByDestination['is_premium']);
 
-    foreach($reviewsByOperatorId as $reviewByOperatorId){
-      $review = new Review($reviewByOperatorId['id'], $reviewByOperatorId['message'], $reviewByOperatorId['author'], $reviewByOperatorId['id_tour_operator']);
-    }
     include('../../partials/cardsTourOperator.php');
  }
 
