@@ -83,7 +83,7 @@
                 <h5 class="card-title">Créer un Tour Opérateur</h5>
                 <form action="traitements/createTo.php" method="POST">
                     <div class="form-group">
-                        <label for="exampleFormControlInput1">Nom opérateur</label>
+                        <label for="exampleFormControlInput1">Nom Opérateur</label>
 
                         <input name="name" type="text" class="form-control" id="exampleFormControlInput1" placeholder="nom opérateur">
                     </div>
@@ -117,7 +117,7 @@
         <div class="card">
             <img class="card-img-top" src="https://www.enfant-en-voyage.com/wp-content/uploads/2015/04/panneau-des-pays-destination.jpg" alt="Card image cap">
             <div class="card-body">
-                <h5 class="card-title">Créer une destination</h5>
+                <h5 class="card-title">Créer une Destination</h5>
                 <form action="traitements/createDestination.php" method="POST">
                     <div class="form-group">
                         <label for="exampleFormControlInput1">Destination</label>
