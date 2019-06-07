@@ -54,14 +54,16 @@
           <i class="icon-white fas fa-users fa-3x"></i>
         </div>
         <div class="vertical-align title-text">
-          Authentification
+
           <?php
-           if (isset($_GET['ERROR'])) {
+          if (isset($_GET['ERROR'])) {
 
             if ($_GET['ERROR'] == 1) {
-              echo "echec de l'authentification";
+              echo "<p>Error Authentification</p>";
             }
-           }
+          } else {
+            echo "Authentification";
+          }
 
           ?>
         </div>
