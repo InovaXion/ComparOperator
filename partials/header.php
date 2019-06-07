@@ -10,7 +10,7 @@
         <a href="#profil">Profil</a>
         <a href="admin/">Administration</a>
         <form class="form-inline my-2 my-lg-0">
-            <input class="form-control mr-sm-2" type="search" placeholder="recherche" aria-label="Search">
+            <input class="form-control mr-sm-2" type="search" placeholder="Rechercher une destination" aria-label="Search">
             <button class="btn btn-secondary my-2 my-sm-0" type="submit">Rechercher</button>
         </form>
 
