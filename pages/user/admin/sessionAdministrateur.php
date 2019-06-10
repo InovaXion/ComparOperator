@@ -33,7 +33,7 @@
     $manager = new Manager($db);
     $tourOps = $manager->getAllOperator();
     $destinations = $manager->getAllDestination();
-    $test = $manager->getNameOfNoPremiumOperator();
+    $tourOpsNoPremium = $manager->getNameOfNoPremiumOperator();
     echo '<pre>' . var_export($test, true) . '</pre>';
     ?>
     <div class="header">
@@ -176,9 +176,11 @@
                         </select>
                     </div>
                     <p class="card-text">Les opérateurs non premium :</p>
-                    <p class="card-text"><?php foreach($test as $test){
-                        echo "<p>". $test['name'] ."</p>";
-                    } ?></p>
+                    <p class="card-text">
+                        <?php foreach($tourOpsNoPremium as $tourOpNoPremium){
+                        echo "<p>". $tourOpNoPremium['name'] ."</p>";
+                        } ?>
+                    </p>
                     <button class="btn btn-warning" type="submit">Créer</button>
                     <div class='card_circle transition'></div>
             </div>
