@@ -137,7 +137,20 @@ public function getIdByOperatorName($tourOp){
         $getId = $reponse->fetch();
         return $getId[0];
     }
+
+// retourne tout les opérateur Non Premium //
+
+public function getNameOfNoPremiumOperator(){
+    $reponse = $this->bdd->query('SELECT name 
+                                  FROM tour_operators
+                                  WHERE is_premium = 0');
+    $getNameOfNoPremiumOperator = $reponse->fetchAll();
+    return $getNameOfNoPremiumOperator;                           
+    }
 }
+
+
+
 
 
 
