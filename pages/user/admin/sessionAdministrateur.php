@@ -34,7 +34,7 @@
     $tourOps = $manager->getAllOperator();
     $destinations = $manager->getAllDestination();
     $tourOpsNoPremium = $manager->getNameOfNoPremiumOperator();
-    echo '<pre>' . var_export($test, true) . '</pre>';
+    
     ?>
     <div class="header">
 
