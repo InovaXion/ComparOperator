@@ -50,7 +50,7 @@ echo "</div>
                    
                     <hr>";
 
-                    // Affiche tout les reviews propre à l'opérateur //
+                    // Affiche tout les 3 derniéres reviews propre à l'opérateur //
                             foreach($reviewsByOperatorId as $reviewByOperatorId){
                             $review = new Review($reviewByOperatorId['id'], $reviewByOperatorId['message'], $reviewByOperatorId['author'], $reviewByOperatorId['id_tour_operator']);
 
@@ -99,8 +99,8 @@ echo "
                 <h2 class='text-uppercase'>". $operators->getName() ."</h2>
                 <form class='bordures' action='traitements/createReview.php' method='POST'>
                     <div class='form-group'>
-                    <input type='textarea' name='author' value='' placeholder='Pseudo'/>
-                    <input type='textarea' name='review' value='' placeholder='Message'/>
+                    <input style='width:300px' type='textarea' name='author' value='' placeholder='Pseudo'/>
+                    <input style='width:300px;height:200px' type='text' name='review' value='' placeholder='Message'/>
                     <input type='hidden' value='" . $destination . "' name='destination'/>
                     <input type='hidden' value='" . $imgPath . "' name='imgPath'/>
                     <input type='hidden' value='" . $operators->getName() . "' name='tourOpName'/>
